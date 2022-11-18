@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+.main__wrapper{
+    max-width: 65rem;
+    margin: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*/////////////////////////////////////// navigation///////////////////////////////////////////////////////////////////////////// */
+
+
+
+.main__wrapper nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.main__wrapper nav #manu__toggle ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.main__wrapper nav #close__open__btn{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 0.2rem;
+    z-index: 33333;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    background-image: url(assets/images/icon-menu.svg);
+    height: 3rem;
+    width: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main__wrapper nav #close__open__btn.active1{
+    background-image: url(assets/images/icon-menu-close.svg);
+}
+.main__wrapper nav #manu__toggle ul li{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: hsl(236, 13%, 42%);
+    cursor: pointer;
+}
+.main__wrapper nav #manu__toggle ul li:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+
+
+/*/////////////////////////////////////// mobile size navigation////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 768px) {
+    .main__wrapper nav #close__open__btn{
+        display: block;
+    }
+    .main__wrapper nav #manu__toggle{
+        background-color: rgba(0, 0, 0, 0.442);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        transform: translateX(-100%);
+        
+    }
+    .main__wrapper nav #manu__toggle.active2{
+        transform: translateX(0);
+    }
+    .main__wrapper nav #manu__toggle ul{
+        padding: 7rem 2rem;
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: white;
+        width: 60%;
+        height: 100%;
+       
+    }
+    .main__wrapper nav #manu__toggle ul li{
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: hsl(240, 100%, 5%);
+        cursor: pointer;
+    }
+    
+}
+/* //////////////////////////////////////////////////////////////// */
+
+
+.main__wrapper .main__container{
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+}
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////single image box/////////////////////////////////////////////// */
+
+.main__wrapper .main__container .box{
+    margin: 0.5rem 0;
+}
+.main__wrapper .main__container .box__1{
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    gap: 0.5rem;
+}
+.main__wrapper .main__container .box__1 div:first-child picture img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.main__wrapper .main__container .box__1 div:nth-last-child(2){
+    align-self: center;
+}
+.main__wrapper .main__container .box__1 div:nth-last-child(2) h1{
+    font-weight: 800;
+    font-size: 2rem;
+    color: hsl(240, 100%, 5%) ;
+}
+.main__wrapper .main__container .box__1 div:last-child{
+    align-self: center;
+}
+.main__wrapper .main__container .box__1 div:last-child p{
+    color: hsl(236, 13%, 42%);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+.main__wrapper .main__container .box__1 div:last-child button{
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    display: inline-block;
+    margin-top: 1rem;
+    width: 10rem;
+    height: 3rem;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.main__wrapper .main__container .box__1 div:last-child button:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////blue box/////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+.main__wrapper .main__container .box__2{
+    background-color: hsl(240, 100%, 5%);
+    padding: 1rem;
+    
+}
+.main__wrapper .main__container .box__2 .box__2__items{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.main__wrapper .main__container .box__2 .border{
+    border-bottom: 1px solid white;
+}
+.main__wrapper .main__container .box__2 div:first-child h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 3rem;
+}
+.main__wrapper .main__container .box__2 div h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: hsl(36, 100%, 99%);
+}
+.main__wrapper .main__container .box__2 div h3:hover{
+    color: hsl(35, 77%, 62%);
+}
+.main__wrapper .main__container .box__2 div p{
+    color: hsl(233, 8%, 79%);
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////last box three images/////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+.main__wrapper .main__container .box__3 {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap: 1rem;
+}
+.main__wrapper .main__container .box__3 .flex__box{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.main__wrapper .main__container .box__3 .flex__box .img__box{
+    height: 9rem;
+}
+.main__wrapper .main__container .box__3 .flex__box .inside__box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.main__wrapper .main__container .box__3 .flex__box .inside__box div{
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(233, 8%, 79%);
+}
+.main__wrapper .main__container .box__3 .flex__box .inside__box h4{
+    font-size: 1.1rem;
+    color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+.main__wrapper .main__container .box__3 .flex__box .inside__box h4:hover{
+    font-size: 1.1rem;
+    color: hsl(35, 77%, 62%);
+}
+.main__wrapper .main__container .box__3 .flex__box .inside__box p{
+    font-size: 0.9rem;
+    color: hsl(236, 13%, 42%);
+}
+.image{
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////dekstop////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    body{
+        min-height: 100vh;
+    }
+    .main__wrapper .main__container{
+        display: grid;
+        grid-template-columns: 1fr 21rem;
+        column-gap: 1rem;
+        row-gap: 2rem;
+        grid-template-rows: min-content min-content;
+    }
+    .main__wrapper .main__container .box__1{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: max-content;
+        gap: 0.5rem;
+    }
+    .main__wrapper .main__container .box__1 div:first-child{
+        grid-column: 1/-1;
+    }
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+    .main__wrapper .main__container .box__2{
+        display: grid;
+        grid-template-rows: 3.2rem 1fr 1fr 1fr;
+        align-items: center;
+        max-height: 30rem;
+    }
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+    .main__wrapper .main__container .box__3 {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: min-content;
+        gap: 1rem;
+        grid-column: 1/-1;
+    }
+    .main__wrapper .main__container .box__3 .flex__box .img__box{
+        height: 7rem;
+        background-color: aqua;
+       
+    }
+    .main__wrapper .main__container .box__3 .flex__box .inside__box{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .main__wrapper .main__container .box__3 .flex__box .inside__box div{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: hsl(233, 8%, 79%);
+    }
+    .main__wrapper .main__container .box__3 .flex__box .inside__box h4{
+        font-size: 1rem;
+        color: hsl(240, 100%, 5%);
+    }
+    .main__wrapper .main__container .box__3 .flex__box .inside__box p{
+        font-size: 0.8rem;
+        color: hsl(236, 13%, 42%);
+    }
+}
